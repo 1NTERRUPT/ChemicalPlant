@@ -4,7 +4,7 @@ Simulation of a chemical plant. TODO: Fill in a longer description
 See the [wiki](https://github.com/1NTERRUPT/ChemicalPlant/wiki) for more information.
 
 ## Todo
- - [ ] Document project goals [#1](../../issues/1)
+ - [ ] [Document project goals](../../issues/1)
  - [ ] Breakdown tasks as issues
  - [ ] Finalize Hardware
  - [ ] Finalize Software
