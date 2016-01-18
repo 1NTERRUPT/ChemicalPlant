@@ -10,7 +10,7 @@ var serialport = require('serialport'),			    // include the serialport library
 	SerialPort = serialport.SerialPort,	            // make a local instance of serial
 	portName = process.argv[2],		                // get the port name from the command line
 	portConfig = {
-		baudRate: 115200,
+		baudRate: 9600,
 		// call myPort.on('data') when a newline is received:
 		parser: serialport.parsers.readline('\n')
 	};
@@ -26,8 +26,6 @@ var wss = new WebSocketServer({server: server});
 
 app.get('/:name', serveFiles);						// listener for all static file requests
 
-// socketServer.on('connection', openSocket);	        // listener for websocket data
-
 function serveFiles(request, response) {
 	var fileName = request.params.name;				    // get the file name from the request
 	response.sendFile(fileName, { root: __dirname });   // send the file
@@ -42,11 +40,7 @@ wss.on('connection', function connection(ws) {
     // flags.binary will be set if a binary data is received.
     // flags.masked will be set if the data was masked.
     console.log(data);
-    myPort.write("RF");                 // send the data to the serial device
-    myPort.write("\n");
-    myPort.write("GF");                 // send the data to the serial device
-    myPort.write("\n");
-    myPort.write("BF");                 // send the data to the serial device
+    myPort.write(data);                 // send the data to the serial device
     myPort.write("\n");
   });
 });

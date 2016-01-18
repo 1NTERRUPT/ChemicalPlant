@@ -4,13 +4,18 @@
 <script type="text/javascript" src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
 </head>
 <body>
-<!--
-recipe: x sec/color
-monitor: see which pump activity
--->
   <h1>Chemical Plant Control</h1>
-  
-  <button id="btnRed">Red Toggle</button>
+
+  <div>
+    <input type="number" id="red" min="0" max="100" value="0">
+    <label for="red">Red</label>
+    <input type="number" id="green" min="0" max="100" value="0">
+    <label for="gree">Green</label>
+    <input type="number" id="blue" min="0" max="100" value="0">
+    <label for="blue">Blue</label>
+  </div>
+
+  <button id="btnMakeMix">Make Mixture</button>
   <script type="text/javascript" src="scripts/app.js"></script>
 </body>
 </html>
