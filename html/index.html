@@ -1,41 +1,111 @@
 <html>
 <head>
 <title>Chemical Plant Control</title>
-<script type="text/javascript" src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
+<link rel="stylesheet" href="/css/bootstrap.min.css">
+<script type="text/javascript" src="/js/jquery-2.2.0.min.js"></script>
+<script type="text/javascript" src="/js/bootstrap.min.js"></script>
+
 </head>
 <body>
-  <h1>Chemical Plant Control</h1>
+<div class="container">
 
-  <div id="readonly">
-    <h3>Current Settings</h3>
-    <p>Red: 7 seconds</p>
-    <p>Green: 3 seconds</p>
-    <p>Blue: 2 seconds</p>
-    <p>
-      <label for="username">Username</label>
-      <input type="text" id="username">
-      <label for="password">Password</label>
-      <input type="password" id="password">
-      <button href="#" id="adminLogin">Admin Login</button>
-    </p>
-  </div>
+</div>
+<nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">Chemical Mixer Control</a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <form class="navbar-form navbar-right">
+            <div class="form-group">
+              <input id="username" type="text" placeholder="Email" class="loggedout form-control" autocomplete="off" style="background-image: url(&quot;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAASCAYAAABSO15qAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3QsPDhss3LcOZQAAAU5JREFUOMvdkzFLA0EQhd/bO7iIYmklaCUopLAQA6KNaawt9BeIgnUwLHPJRchfEBR7CyGWgiDY2SlIQBT/gDaCoGDudiy8SLwkBiwz1c7y+GZ25i0wnFEqlSZFZKGdi8iiiOR7aU32QkR2c7ncPcljAARAkgckb8IwrGf1fg/oJ8lRAHkR2VDVmOQ8AKjqY1bMHgCGYXhFchnAg6omJGcBXEZRtNoXYK2dMsaMt1qtD9/3p40x5yS9tHICYF1Vn0mOxXH8Uq/Xb389wff9PQDbQRB0t/QNOiPZ1h4B2MoO0fxnYz8dOOcOVbWhqq8kJzzPa3RAXZIkawCenHMjJN/+GiIqlcoFgKKq3pEMAMwAuCa5VK1W3SAfbAIopum+cy5KzwXn3M5AI6XVYlVt1mq1U8/zTlS1CeC9j2+6o1wuz1lrVzpWXLDWTg3pz/0CQnd2Jos49xUAAAAASUVORK5CYII=&quot;); background-attachment: scroll; background-position: 100% 50%; background-repeat: no-repeat;">
+            </div>
+            <div class="form-group">
+              <input id="password" type="password" placeholder="Password" class="loggedout form-control" autocomplete="off" style="background-image: url(&quot;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAASCAYAAABSO15qAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3QsPDhss3LcOZQAAAU5JREFUOMvdkzFLA0EQhd/bO7iIYmklaCUopLAQA6KNaawt9BeIgnUwLHPJRchfEBR7CyGWgiDY2SlIQBT/gDaCoGDudiy8SLwkBiwz1c7y+GZ25i0wnFEqlSZFZKGdi8iiiOR7aU32QkR2c7ncPcljAARAkgckb8IwrGf1fg/oJ8lRAHkR2VDVmOQ8AKjqY1bMHgCGYXhFchnAg6omJGcBXEZRtNoXYK2dMsaMt1qtD9/3p40x5yS9tHICYF1Vn0mOxXH8Uq/Xb389wff9PQDbQRB0t/QNOiPZ1h4B2MoO0fxnYz8dOOcOVbWhqq8kJzzPa3RAXZIkawCenHMjJN/+GiIqlcoFgKKq3pEMAMwAuCa5VK1W3SAfbAIopum+cy5KzwXn3M5AI6XVYlVt1mq1U8/zTlS1CeC9j2+6o1wuz1lrVzpWXLDWTg3pz/0CQnd2Jos49xUAAAAASUVORK5CYII=&quot;); background-attachment: scroll; background-position: 100% 50%; background-repeat: no-repeat;">
+            </div>
+            <button type="submit" id="adminLogin" class="loggedout btn btn-success">Sign in</button>
+            <p class="loggedin">Logged in as admin</p>
+          </form>
+        </div><!--/.navbar-collapse -->
+      </div>
+    </nav>
 
-  <div id="admin" style="display:none">
-    <h3>Admin controls</h3>
-    <div>
-      <p>Enter # seconds for each color</p>
-      <input type="number" id="red" min="0" max="100" value="7">
-      <label for="red">Red</label>
-      <input type="number" id="green" min="0" max="100" value="3">
-      <label for="gree">Green</label>
-      <input type="number" id="blue" min="0" max="100" value="2">
-      <label for="blue">Blue</label>
+    <div class="container" style="margin-top:50px">
+      <div id="readonly" class="loggedout">
+        <h2>Monitor Mode</h2>
+        <table class="table">
+          <thead>
+            <tr>
+              <th>Motor</th>
+              <th>Color</th>
+              <th>Mixture</th>
+              <th>Status</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Motor 1</td>
+              <td>Red</td>
+              <td>7 sec</td>
+              <td><span class="label label-success">OK</span></td>
+            </tr>
+            <tr>
+              <td>Motor 2</td>
+              <td>Green</td>
+              <td>3 sec</td>
+              <td><span class="label label-success">OK</span></td>
+            </tr>
+            <tr>
+              <td>Motor 3</td>
+              <td>Blue</td>
+              <td>2 sec</td>
+              <td><span class="label label-success">OK</span></td>
+            </tr>
+          </tbody>
+        </table>
+        <div class="well">Log in as an admin to edit configuration.</div>
+      </div>
+
+      <div id="admin" class="loggedin col-md-4">
+        <h2>Admin Mode</h2>
+
+        <form class="form-horizontal">
+          <legend>Enter time in seconds for each pump</legend>
+          <div class="form-group">
+            <label for="red" class="col-sm-2 control-label">Red</label>
+            <div class="col-sm-10">
+              <input type="number" class="form-control" id="red" value="7"/>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="green" class="col-sm-2 control-label">Green</label>
+            <div class="col-sm-10">
+              <input type="number" class="form-control" id="green" value="3"/>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="blue" class="col-sm-2 control-label">Blue</label>
+            <div class="col-sm-10">
+              <input type="number" class="form-control" id="blue" value="2"/>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <div class="col-sm-offset-2 col-sm-10">
+              <button id="btnMakeMix" type="submit" class="btn btn-primary">Make Mixture</button>
+            </div>
+          </div>
+        </form>
+      </div>
     </div>
-
-    <div style="margin-top: 15px">
-      <button id="btnMakeMix">Make Mixture</button>
-    </div>
-  </div>
-  <script type="text/javascript" src="scripts/app.js"></script>
+    <script type="text/javascript" src="scripts/app.js"></script>
 </body>
 </html>

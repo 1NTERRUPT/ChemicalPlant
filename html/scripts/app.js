@@ -6,6 +6,7 @@ function qualifyUrl(url) {
 }
 
 $(function () {
+  $('.loggedin').hide();
   var url = qualifyUrl(('/'));
   var ws = new WebSocket('ws://'.concat(url));
 
@@ -15,6 +16,8 @@ $(function () {
     var red = parseInt($('#red').val());
     var green = parseInt($('#green').val());
     var blue = parseInt($('#blue').val());
+
+    alert('Beginning processing');
 
     ws.send('RT'); 
     setTimeout(function() {
@@ -28,15 +31,19 @@ $(function () {
         }, green*total);
       }, blue*total);
     }, red*total);
+
+
+    return false;
    });
 
 
    $('#adminLogin').click(function() {
      if($('#username').val() === 'hdavis' && $('#password').val() === 'ztbwF5xx') {
-       $('#readonly').css('display','none');
-       $('#admin').css('display','');
+       $('.loggedout').hide();
+       $('.loggedin').show();
      } else {
        alert('Access is denied');
      }
+     return false;
    });
 });
