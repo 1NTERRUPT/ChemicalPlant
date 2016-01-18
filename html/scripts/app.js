@@ -29,4 +29,14 @@ $(function () {
       }, blue*total);
     }, red*total);
    });
+
+
+   $('#adminLogin').click(function() {
+     if($('#username').val() === 'hdavis' && $('#password').val() === 'ztbwF5xx') {
+       $('#readonly').css('display','none');
+       $('#admin').css('display','');
+     } else {
+       alert('Access is denied');
+     }
+   });
 });

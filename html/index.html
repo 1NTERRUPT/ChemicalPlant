@@ -6,16 +6,36 @@
 <body>
   <h1>Chemical Plant Control</h1>
 
-  <div>
-    <input type="number" id="red" min="0" max="100" value="0">
-    <label for="red">Red</label>
-    <input type="number" id="green" min="0" max="100" value="0">
-    <label for="gree">Green</label>
-    <input type="number" id="blue" min="0" max="100" value="0">
-    <label for="blue">Blue</label>
+  <div id="readonly">
+    <h3>Current Settings</h3>
+    <p>Red: 7 seconds</p>
+    <p>Green: 3 seconds</p>
+    <p>Blue: 2 seconds</p>
+    <p>
+      <label for="username">Username</label>
+      <input type="text" id="username">
+      <label for="password">Password</label>
+      <input type="password" id="password">
+      <button href="#" id="adminLogin">Admin Login</button>
+    </p>
   </div>
 
-  <button id="btnMakeMix">Make Mixture</button>
+  <div id="admin" style="display:none">
+    <h3>Admin controls</h3>
+    <div>
+      <p>Enter # seconds for each color</p>
+      <input type="number" id="red" min="0" max="100" value="7">
+      <label for="red">Red</label>
+      <input type="number" id="green" min="0" max="100" value="3">
+      <label for="gree">Green</label>
+      <input type="number" id="blue" min="0" max="100" value="2">
+      <label for="blue">Blue</label>
+    </div>
+
+    <div style="margin-top: 15px">
+      <button id="btnMakeMix">Make Mixture</button>
+    </div>
+  </div>
   <script type="text/javascript" src="scripts/app.js"></script>
 </body>
 </html>
