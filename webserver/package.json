@@ -1,9 +1,9 @@
 {
   "name": "webserver",
   "version": "1.0.0",
-  "description": "",
   "main": "server.js",
   "dependencies": {
+    "forever": "^0.15.1",
     "ws": "^1.0.1"
   },
   "devDependencies": {},
@@ -13,5 +13,6 @@
   },
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "description": ""
 }
