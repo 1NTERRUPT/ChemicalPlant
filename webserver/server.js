@@ -38,6 +38,8 @@ wss.on('connection', function connection(ws) {
     // flags.binary will be set if a binary data is received.
     // flags.masked will be set if the data was masked.
     console.log(data);
+    exec('mpg123 ../resource/siren.mp3');
+    
     myPort.write(data);                 // send the data to the serial device
     myPort.write("\n");
   });
