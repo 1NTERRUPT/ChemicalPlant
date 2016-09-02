@@ -3,6 +3,8 @@ Simulation of a chemical plant. TODO: Fill in a longer description
 
 See the [wiki](https://github.com/1NTERRUPT/ChemicalPlant/wiki) for more information.
 
+(Thank you Alexander Kushnirenko for providing many of the line-by-line commands.)
+
 ## Architecture
 Our simulation is built upon the Purdue Model, which broadly consists of a corporate network (Levels 4-5), a DMZ, and an industrial network (Levels 0-3). This project is consists of Levels 0-2 of the Purdue Model:
 
