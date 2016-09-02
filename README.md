@@ -69,7 +69,7 @@ nodejs ./server.js /dev/ttyACM0
 You should then be able to browse to this machine on port 8080.
 
 ## Todo
- - [ ] [Document project goals](../../issues/1)
+ - [ ] Provide wiring schematics
  - [ ] Breakdown tasks as issues
  - [ ] Finalize Hardware
  - [ ] Finalize Software
