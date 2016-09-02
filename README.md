@@ -14,7 +14,7 @@ Our simulation is built upon the Purdue Model, which broadly consists of a corpo
   - This consists of a 12-volt power supply, three DC pumps, and jars of colored water representing different chemicals.
 
 ### Level 2 - HMI
-All of our testing so far has been either on Raspbian for the Raspberry Pi or Debian virtual machines. This should be doable on other flavors of Linux, but we haven't tested them. Our instructions here are based on Debian and some of these steps will require you to run them as root (```sudo su```) and others as a user with ```sudo``` privileges; will go with 'marc' for illustrative purposes.
+All of our testing so far has been either on Raspbian for the Raspberry Pi or Debian virtual machines. This should be doable on other flavors of Linux, but we haven't tested them. Our instructions here are based on Debian. Some of these steps will require you to run them as root (```sudo su```) and others as a user with ```sudo``` privileges; we'll go with 'marc' for illustrative purposes.
 
 #### General Dependencies
 You will need certain packages, which are not installed with the OS by default. We need to get dependencies for both the web interface and the Arduino installed.
